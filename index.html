@@ -3,56 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo App UI</title>
+    <title>Todo App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="bg-gray-100 min-h-screen flex items-center justify-center px-4">
     <main class="bg-white p-6 rounded-2xl shadow-lg w-full max-w-lg">
       <header class="mb-6 text-center">
         <h1 class="text-3xl font-bold text-blue-600">Todo App</h1>
-        <p class="text-gray-500 text-sm"></p>
       </header>
 
-      <!-- Input Section -->
-      <section class="flex flex-col sm:flex-row gap-3 mb-5">
+      <!-- Form -->
+      <form id="taskForm" class="flex flex-col sm:flex-row gap-3 mb-5">
         <input
+          id="taskInput"
           type="text"
           placeholder="Write your task..."
           class="flex-1 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-        <button class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">
+        <button
+          type="submit"
+          class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition"
+        >
           Add
         </button>
-      </section>
+      </form>
 
-      <!-- Display Container -->
-      <section id="task-container" class="space-y-3">
-        <!-- Task 1 -->
-        <article class="flex justify-between items-center p-3 bg-gray-100 rounded-md shadow-sm">
-          <span class="text-gray-800">Sample Task One</span>
-          <div class="space-x-2">
-            <button class="bg-yellow-400 text-white px-3 py-1 text-sm rounded hover:bg-yellow-500">
-              Update
-            </button>
-            <button class="bg-red-500 text-white px-3 py-1 text-sm rounded hover:bg-red-600">
-              Delete
-            </button>
-          </div>
-        </article>
-
-        <!-- Task 2 -->
-        <article class="flex justify-between items-center p-3 bg-gray-100 rounded-md shadow-sm">
-          <span class="text-gray-800">Sample Task Two</span>
-          <div class="space-x-2">
-            <button class="bg-yellow-400 text-white px-3 py-1 text-sm rounded hover:bg-yellow-500">
-              Update
-            </button>
-            <button class="bg-red-500 text-white px-3 py-1 text-sm rounded hover:bg-red-600">
-              Delete
-            </button>
-          </div>
-        </article>
-      </section>
+      <!-- Task list -->
+      <section id="taskList" class="space-y-3"></section>
     </main>
+
+    <!-- Script -->
+    <script src="script.js"></script>
   </body>
 </html>
